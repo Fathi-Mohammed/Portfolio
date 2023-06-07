@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Exo', sans-serif;
+    background-color: #02022c;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.sectionMainHead h1 {
+    position: relative;
+    font-size: 40px;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+}
+
+
+/* Start Header */
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #000016;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .container .logo img {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header .container .logo h3 {
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header .container nav {
+        display: none;
+    }
+}
+
+header .container nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header .container nav ul li a {
+    color: white;
+    transition: 0.3s;
+}
+
+header .container nav ul li a:hover {
+    color: chocolate;
+}
+
+
+/* Start side Menu */
+header .navbarForMobile {
+    display: none;
+    height: 0;
+    overflow: hidden;
+}
+
+header .navbarForMobile ul {
+    text-align: center;
+}
+
+header .navbarForMobile ul li {
+    padding: 15px;
+}
+
+header .navbarForMobile ul li:not(:last-of-type) {
+    border-bottom: 1px solid #777;
+
+}
+
+header .navbarForMobile ul li a {
+    color: white;
+    transition: 0.3s;
+}
+
+
+header .container i {
+    color: white;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    header .navbarForMobile,
+    header .container i {
+        display: block;
+    }
+
+}
+
+/* End side Menu */
+/* End Header */
+
+/* Start background Animation */
+
+.circles {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+    z-index: -2;
+
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 1s;
+    animation-duration: 11s;
+}
+
+/* End background Animation */
+
+
+/* Start Landing */
+.landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.landing .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.landing .container .landingInfo {
+    color: white;
+}
+
+.landing .container .landingInfo h3 {
+    font-size: 25px;
+}
+
+.landing .container .landingInfo h3 span {
+    color: #97E874;
+}
+
+.landing .container .landingInfo h3:last-of-type {
+    text-align: right;
+}
+
+.landing .container .landingInfo h1 {
+    font-size: 60px;
+    margin: 10px 0;
+    padding-right: 10px;
+    border-right: 5px solid white;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(30),
+        cursor 0.4s step-start infinite alternate;
+}
+
+.landing .container .landingInfo h1 span {
+    color: #F5946E;
+}
+
+@media (max-width: 768px) {
+    .landing .container .landingInfo h1 {
+        font-size: 30px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .landing .container .landingInfo h3 {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+}
+
+.landing .container .landingInfo .social {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.landing .container .landingInfo .social a {
+    padding: 10px;
+    background: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-left: 5px;
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+}
+
+.landing .container .landingInfo .social a i {
+    color: #000016;
+    transition: 0.3s;
+}
+
+.landing .container .landingInfo .social a:hover i {
+    color: white;
+}
+
+.landing .container .landingInfo .social .facebook:hover {
+    background-color: #1877f2;
+}
+
+.landing .container .landingInfo .social .linkedin:hover {
+    background-color: #0a66c2;
+}
+
+.landing .container .landingInfo .social .instagram:hover {
+    background-color: #c13584;
+}
+
+.landing .container .landingInfo .social .twitter:hover {
+    background-color: #1da1f2;
+}
+
+.landing .container .landingInfo .social .github:hover {
+    background-color: #4078c0;
+}
+
+.landing .container .landingInfo .social .whatsapp:hover {
+    background-color: #25d366;
+}
+
+.landing .container .landingImage .shape {
+    width: 450px;
+    height: 450px;
+    background: #FF0099;
+    background-image: linear-gradient(45deg, #3023AE 0%, #FF0099 100%);
+    box-shadow: -2vmin 3vmin #ffffff12;
+    border-radius: 79% 21% 32% 68% / 47% 70% 30% 53%;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+}
+
+@media (max-width: 768px) {
+    .landing .container .landingImage .shape {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        transform: translate(-50%, -50%);
+    }
+
+    .landing .container .landingImage .shape i {
+        display: none;
+    }
+
+}
+
+.landing .container .landingImage .shape i {
+    color: #000016;
+    z-index: 100;
+    font-weight: bolder;
+    font-size: 150px;
+}
+
+/* End Landing */
+
+/* Start Skills */
+.skills {
+    margin: 100px 0;
+    color: white;
+}
+
+.skills .container .skillsContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .skills .container .skillsContent {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.skills .container .skillsContent .skill {
+    width: calc(50% - 15px);
+}
+@media (max-width: 768px) {
+    .skills .container .skillsContent .skill {
+        width: 100%;
+    }
+}
+
+.skills .container .skillsContent .skill h4 {
+    margin-bottom: 10px;
+}
+
+.skills .container .skillsContent .skill .skill-progress-bar {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 5px;
+    padding: 5px 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skills .container .skillsContent .skill .skill-progress-bar span {
+    background: linear-gradient(135deg, rgba(236,0,140,1)0%,rgba(252,103,103,1)100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+}
+.skills .container .skillsContent .html .skill-progress-bar span {
+    width: 85%;
+}
+.skills .container .skillsContent .css .skill-progress-bar span {
+    width: 75%;
+}
+.skills .container .skillsContent .js .skill-progress-bar span {
+    width: 35%;
+}
+.skills .container .skillsContent .bootstrap .skill-progress-bar span {
+    width: 85%;
+}
+.skills .container .skillsContent .sass .skill-progress-bar span {
+    width: 50%;
+}
+.skills .container .skillsContent .photoshop .skill-progress-bar span {
+    width: 90%;
+}
+
+
+/* End Skills */
+
+/* Start My Work */
+.myWork {
+    margin: 100px 0;
+}
+
+.myWork .container .workCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.myWork .container .workCards .card {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.6px);
+    -webkit-backdrop-filter: blur(2.6px);
+    overflow: hidden;
+    padding: 10px;
+    color: white;
+}
+
+.myWork .container .workCards .card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.myWork .container .workCards .card .title h3 {
+    margin-bottom: 10px;
+}
+
+.myWork .container .workCards .card .title p {
+    margin-bottom: 30px;
+}
+
+.myWork .container .workCards .card .cardBtn {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.myWork .container .workCards .card .cardBtn a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.myWork .container .workCards .card .cardBtn .githubBtn:hover {
+    background-color: #4078c0;
+}
+
+.myWork .container .workCards .card .cardBtn .viewBtn:hover {
+    background-color: #ff4c4c;
+}
+
+/* End My Work */
+
+
+
+/* Start Keyframes */
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+
+
+/* End Keyframes */
